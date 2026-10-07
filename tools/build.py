@@ -90,7 +90,7 @@ def header(page):
   <div class="menu__foot">
     <a href="contact.html" class="btn btn--butter">Request a Quote {ICON['arrow']}</a>
     <a href="#" class="btn btn--wa" data-wa>{ICON['wa']} WhatsApp</a>
-    <a href="#" class="btn btn--glass" data-tel>{ICON['phone']} Call</a>
+    <a href="#" class="btn btn--line-light" data-tel>{ICON['phone']} Call</a>
   </div>
 </nav>'''
 
@@ -105,7 +105,7 @@ def footer(page):
       <div>
         <a href="{'#home' if page == 'home' else 'index.html'}" class="logo"><span class="logo__mark" aria-hidden="true">SSS</span><span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Quality assured · priced for you</span></span></a>
         <p>A 3rd-generation Indian import-export house supplying origin-sourced fresh produce, spices, herbs and powders to buyers in India and abroad.</p>
-        <div class="footer__badges" aria-label="Registrations"><span>FSSAI</span><span>APEDA</span><span>IEC</span><span>SPICES BOARD</span></div>
+        <p class="footer__regs">FSSAI · APEDA · IEC · Spices Board</p>
       </div>
       <div>
         <h4>Company</h4>
@@ -150,19 +150,14 @@ def categories():
         for i in items:
             if i not in seen:
                 seen.append(i)
-        cards.append(f'''      <article class="cat" data-reveal>
+        cards.append(f'''      <a class="cat" href="products.html?category={c['id']}" data-reveal>
         <div class="cat__img">{img_set('categories', c['image'], c['name'] + ' sourced from India', '(max-width: 640px) 100vw, (max-width: 980px) 50vw, 40vw')}</div>
-        <span class="glass cat__origin" data-glass>{ICON['pin']}{escape(c['origins'])}</span>
-        <div class="glass cat__body" data-glass>
+        <div class="cat__body">
+          <p class="cat__origin">{escape(c['origins'])}</p>
           <h3>{escape(c['name'])}</h3>
-          <p>{escape(c['desc'])}</p>
-          <p class="cat__items">{escape(' · '.join(seen))}</p>
-          <div class="cat__actions">
-            <a href="{contact_href(c['name'])}" class="btn btn--butter btn--sm">Enquire</a>
-            <a href="products.html?category={c['id']}" class="btn btn--glass btn--sm">View {escape(c['short'].lower())} {ICON['arrow']}</a>
-          </div>
+          <span class="cat__link">Explore {len(seen)} products {ICON['arrow']}</span>
         </div>
-      </article>''')
+      </a>''')
     return '    <div class="cats">\n' + '\n'.join(cards) + '\n    </div>'
 
 
@@ -173,16 +168,14 @@ def product_grid():
         cat = CATS[p['category']]
         search = ' '.join([p['name'], cat['name'], p['origin'], p['state'], ' '.join(p['varieties'])]).lower()
         cards.append(f'''        <article class="pcard" id="{p['id']}" data-id="{p['id']}" data-cat="{p['category']}" data-state="{escape(p['state'])}" data-search="{escape(search)}">
-          <div class="pcard__img">{img_set('products', p['id'], p['name'] + ' from ' + p['origin'] + ', ' + p['state'], '(max-width: 380px) 100vw, (max-width: 980px) 50vw, 25vw')}
-            <span class="glass pcard__origin" data-glass>{ICON['pin']}{escape(p['origin'])}, {escape(p['state'])}</span>
-          </div>
+          <button type="button" class="pcard__img" data-open="{p['id']}" aria-haspopup="dialog" aria-label="View details: {escape(p['name'])}">{img_set('products', p['id'], p['name'] + ' from ' + p['origin'] + ', ' + p['state'], '(max-width: 380px) 100vw, (max-width: 980px) 50vw, 25vw')}</button>
           <div class="pcard__body">
             <span class="pcard__cat">{escape(cat['short'])}</span>
             <h3>{escape(p['name'])}</h3>
-            <p>{escape(p['desc'])}</p>
+            <p class="pcard__origin">{escape(p['origin'])}, {escape(p['state'])}</p>
             <div class="pcard__actions">
-              <button type="button" class="btn btn--line" data-open="{p['id']}" aria-haspopup="dialog">Details</button>
-              <a href="{contact_href(p['name'])}" class="btn btn--oxford">Enquire</a>
+              <button type="button" class="pcard__link" data-open="{p['id']}" aria-haspopup="dialog">Details</button>
+              <a href="{contact_href(p['name'])}" class="pcard__link pcard__link--strong">Enquire {ICON['arrow']}</a>
             </div>
           </div>
         </article>''')

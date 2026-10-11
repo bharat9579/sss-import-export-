@@ -29,6 +29,27 @@
   });
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
+  /* ------------------------------------------------ hero product mosaic: tiles cross-fade one at a time */
+  document.querySelectorAll('[data-mosaic]').forEach(function (mosaic) {
+    var tiles = Array.prototype.filter.call(mosaic.querySelectorAll('[data-tile]'), function (t) {
+      return t.querySelectorAll('.hm-slide').length > 1;
+    });
+    if (reduceMotion || !tiles.length) return;
+    var turn = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      // the big onion tile changes every other turn, so it stays the focus
+      var tile = turn % 2 === 0 ? tiles[0] : tiles[1 + ((turn - 1) / 2) % (tiles.length - 1)];
+      turn++;
+      if (!tile || tile.offsetParent === null) return;
+      var slides = tile.querySelectorAll('.hm-slide');
+      var cur = tile.querySelector('.hm-slide.is-on');
+      var idx = Array.prototype.indexOf.call(slides, cur);
+      cur.classList.remove('is-on');
+      slides[(idx + 1) % slides.length].classList.add('is-on');
+    }, 1600);
+  });
+
   /* ------------------------------------------------ refractive glass (Chromium supports url() in backdrop-filter) */
   var brands = (navigator.userAgentData && navigator.userAgentData.brands) || [];
   if (!reduceMotion && brands.some(function (b) { return /Chromium/.test(b.brand); })) doc.classList.add('liquid-ok');

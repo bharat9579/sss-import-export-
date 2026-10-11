@@ -1064,3 +1064,13 @@ h3 { font-weight: 500; letter-spacing: -.015em; }
   .pp-card__body h3 { font-size: .95rem; }
   .faq__item summary { font-size: 1rem; padding: 20px 0; }
 }
+
+/* trust strip: label and badges centred */
+.trust__inner { flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 14px; }
+.trust__list { justify-content: center; }
+.trust__list li:first-child { padding-left: 22px; }
+@media (max-width: 640px) {
+  .trust__list { row-gap: 12px; }
+  .trust__list li, .trust__list li:first-child, .trust__list li:nth-child(3) { padding: 0 12px; }
+  .trust__list li + li { border-left: 0; }
+}

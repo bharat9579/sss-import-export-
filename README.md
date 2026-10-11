@@ -81,3 +81,5 @@ Legacy section satellite flyover: EOxCloudless 2016 (https://cloudless.eox.at) b
 - `python3 tools/build.py` writes the SEO `<head>` (meta, Open Graph, JSON-LD) into every page, generates `products/*.html`, `industrial/*.html`, `services/white-label.html`, and writes `sitemap.xml`, `robots.txt` and `vercel.json` (clean URLs such as `/products/onion`).
 - Share images (1200×630) live in `assets/img/og/`.
 - New page photos (coconut, rice, machines, chemicals, plastics) are CC0 / public domain from Wikimedia Commons; the white-label image is a mockup made from the site's own photos.
+
+"Why choose us" hover clips in `assets/video/` are cut from public-domain USDA footage on Wikimedia Commons (Potatoes Sorting Montana2026; Fresno Family Farm producer interview; Harvest 20181008-FPAC-KLS-0012; 20201119-TFAA-LSC-0044 port clip) and the CC0 "Truck Driving on Southern Nevada Liteweight Road". Replace with the company's own footage when available.

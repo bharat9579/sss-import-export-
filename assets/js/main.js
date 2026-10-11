@@ -72,6 +72,45 @@
     }, { threshold: [0, 0.35], rootMargin: '400px 0px 0px 0px' }).observe(map);
   });
 
+  /* ------------------------------------------------ why choose us: a short clip plays in the hovered box */
+  (function () {
+    var cards = document.querySelectorAll('[data-feature-video]');
+    if (!cards.length) return;
+    var prime = function (card) {
+      var v = card.querySelector('video');
+      if (v && !v.getAttribute('src')) { v.setAttribute('poster', v.getAttribute('data-poster')); v.setAttribute('src', v.getAttribute('data-src')); }
+      return v;
+    };
+    var start = function (card) {
+      if (reduceMotion) return;
+      var v = prime(card);
+      card.classList.add('is-playing');
+      var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+    };
+    var stop = function (card) {
+      var v = card.querySelector('video');
+      card.classList.remove('is-playing');
+      if (v && v.getAttribute('src')) v.pause();
+    };
+    if (canHover) {
+      cards.forEach(function (card) {
+        card.addEventListener('pointerenter', function () { start(card); });
+        card.addEventListener('pointerleave', function () { stop(card); });
+        card.addEventListener('focusin', function () { start(card); });
+        card.addEventListener('focusout', function () { stop(card); });
+      });
+      // fetch the posters once the section is near, so the first hover is instant
+      if ('IntersectionObserver' in window) {
+        var near = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { prime(e.target); near.unobserve(e.target); } }); }, { rootMargin: '300px 0px' });
+        cards.forEach(function (c) { near.observe(c); });
+      }
+    } else if ('IntersectionObserver' in window) {
+      // touch screens have no hover: play the box that is in the middle of the screen
+      var mid = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) start(e.target); else stop(e.target); }); }, { rootMargin: '-35% 0px -35% 0px' });
+      cards.forEach(function (c) { mid.observe(c); });
+    }
+  })();
+
   /* ------------------------------------------------ hero product mosaic: tiles cross-fade one at a time */
   document.querySelectorAll('[data-mosaic]').forEach(function (mosaic) {
     var tiles = Array.prototype.filter.call(mosaic.querySelectorAll('[data-tile]'), function (t) {

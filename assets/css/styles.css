@@ -1152,3 +1152,26 @@ html.sl-on .sl { position: fixed; inset: 0; z-index: 9999; display: flex; flex-d
 @media (prefers-reduced-motion: reduce) {
   .call-btn__icon svg, .call-btn__wave, .call-btn::after { animation: none; }
 }
+
+/* =====================================================================
+   Why choose us: each box plays a short clip about its point on hover
+   (touch screens: the box in the middle of the screen)
+   ===================================================================== */
+.why .feature { position: relative; isolation: isolate; overflow: hidden; }
+.why .features .feature, .why .features .feature:not(:nth-child(3n+1)) { padding-left: 34px; padding-right: 34px; }
+.feature__media { position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .6s var(--ease); background: var(--oxford-deep); }
+.feature__media video { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.1); transition: transform 7s linear; }
+.feature__media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 21, 48, .2) 0%, rgba(0, 21, 48, .6) 50%, rgba(0, 21, 48, .9) 100%); }
+.feature__cap { position: absolute; top: 18px; right: 18px; z-index: 1; display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 100px;
+  font-size: .62rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--oxford-deep); background: var(--butter-yellow);
+  opacity: 0; transform: translateY(-6px); transition: opacity .5s var(--ease) .15s, transform .5s var(--ease) .15s; }
+.feature__cap::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #d1372f; animation: om-blink 1.4s ease-in-out infinite; }
+.feature.is-playing .feature__media { opacity: 1; }
+.feature.is-playing .feature__media video { transform: scale(1); }
+.feature.is-playing .feature__cap { opacity: 1; transform: none; }
+.feature.is-playing p { color: rgba(244, 241, 230, .92); }
+.feature h3, .feature p, .feature__icon { position: relative; transition: color .5s var(--ease); }
+@media (max-width: 640px) {
+  .why .features .feature, .why .features .feature:nth-child(2n) { padding: 34px 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .feature__media video { transform: none; transition: none; } }

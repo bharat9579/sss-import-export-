@@ -492,7 +492,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* =====================================================================
    Products page
    ===================================================================== */
-.toolbar { position: sticky; top: 88px; z-index: 20; margin-top: -34px; padding: 14px; border-radius: 24px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .6fr); gap: 12px; align-items: center; }
+.toolbar { position: sticky; top: 88px; z-index: 20; margin-top: -34px; padding: 14px; border-radius: 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: center; }
 .field { position: relative; }
 .field svg { position: absolute; left: 16px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--ink-soft); pointer-events: none; }
 .input, .select, .textarea {

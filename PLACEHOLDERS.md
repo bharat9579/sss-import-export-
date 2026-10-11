@@ -6,7 +6,7 @@ Everything below is marked on the live pages with a **dashed yellow highlight** 
 
 | Setting | What to enter | Example format |
 |---|---|---|
-| `whatsappNumber` | WhatsApp number, digits only with country code | `919876543210` |
+| `whatsappNumber` | WhatsApp number, digits only with country code | set: `917350319193` (+91 73503 19193) |
 | `phoneDisplay` | Phone number as it should appear | `+91 98765 43210` |
 | `phoneDial` | Phone number for tap-to-call | `+919876543210` |
 | `email` | Export desk email | `export@yourdomain.com` |

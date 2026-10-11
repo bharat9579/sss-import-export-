@@ -1,4 +1,4 @@
-/* Products page: search, category + origin filters, detail modal */
+/* Products page: search, category filter, detail modal */
 (function () {
   'use strict';
   var data = window.SSS_DATA;
@@ -10,12 +10,11 @@
 
   var cards = Array.prototype.slice.call(document.querySelectorAll('.pcard'));
   var q = document.getElementById('q');
-  var originSel = document.getElementById('origin');
   var chipsBox = document.getElementById('cats');
   var countEl = document.getElementById('count');
   var emptyEl = document.getElementById('empty');
   var resetBtn = document.getElementById('reset');
-  var state = { q: '', cat: '', origin: '' };
+  var state = { q: '', cat: '' };
 
   /* ---------- build filters */
   var chip = function (id, label, n) {
@@ -29,11 +28,6 @@
   data.categories.forEach(function (c) {
     chip(c.id, c.name, data.products.filter(function (p) { return p.category === c.id; }).length);
   });
-  var states = {};
-  data.products.forEach(function (p) { states[p.state] = (states[p.state] || 0) + 1; });
-  Object.keys(states).sort().forEach(function (s) {
-    var o = document.createElement('option'); o.value = s; o.textContent = s + ' (' + states[s] + ')'; originSel.appendChild(o);
-  });
 
   /* ---------- filtering */
   function apply() {
@@ -41,7 +35,6 @@
     var shown = 0;
     cards.forEach(function (card) {
       var ok = (!state.cat || card.dataset.cat === state.cat) &&
-               (!state.origin || card.dataset.state === state.origin) &&
                (!term || card.dataset.search.indexOf(term) !== -1);
       card.hidden = !ok;
       if (ok) shown++;
@@ -50,11 +43,10 @@
     var label = state.cat ? catName[state.cat].name.toLowerCase() : 'products';
     countEl.textContent = shown === data.products.length ? 'Showing all ' + shown + ' products' : 'Showing ' + shown + ' ' + (shown === 1 ? 'product' : label) + ' · ' + data.products.length + ' in total';
     emptyEl.classList.toggle('is-shown', shown === 0);
-    resetBtn.hidden = !(state.q || state.cat || state.origin);
+    resetBtn.hidden = !(state.q || state.cat);
     // keep the URL shareable
     var p = new URLSearchParams();
     if (state.cat) p.set('category', state.cat);
-    if (state.origin) p.set('origin', state.origin);
     if (state.q) p.set('q', state.q);
     var qs = p.toString();
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
@@ -62,15 +54,13 @@
   }
   var debounce;
   q.addEventListener('input', function () { clearTimeout(debounce); debounce = setTimeout(function () { state.q = q.value; apply(); }, 120); });
-  originSel.addEventListener('change', function () { state.origin = originSel.value; apply(); });
   chipsBox.addEventListener('click', function (e) { var b = e.target.closest('.chip'); if (!b) return; state.cat = b.dataset.cat; apply(); });
-  function reset() { state = { q: '', cat: '', origin: '' }; q.value = ''; originSel.value = ''; apply(); }
+  function reset() { state = { q: '', cat: '' }; q.value = ''; apply(); }
   resetBtn.addEventListener('click', reset);
   document.querySelectorAll('[data-reset]').forEach(function (b) { b.addEventListener('click', reset); });
 
   var params = new URLSearchParams(location.search);
   if (params.get('category') && catName[params.get('category')]) state.cat = params.get('category');
-  if (params.get('origin') && states[params.get('origin')]) { state.origin = params.get('origin'); originSel.value = state.origin; }
   if (params.get('q')) { state.q = params.get('q'); q.value = state.q; }
   apply();
 
@@ -86,18 +76,16 @@
     lastFocus = document.activeElement;
     var img = $('m-img');
     img.src = 'assets/img/products/' + p.id + '-1600.webp';
-    img.alt = p.name + ' from ' + p.origin + ', ' + p.state;
+    img.alt = p.name;
     $('m-cat').textContent = catName[p.category].name;
     $('m-title').textContent = p.name;
-    $('m-origin').textContent = 'Origin: ' + p.origin + ', ' + p.state;
-    $('m-story').textContent = p.story;
     $('m-varieties').textContent = list(p.varieties);
     $('m-grades').textContent = list(p.grades);
     $('m-packaging').textContent = list(p.packaging);
     $('m-enquire').href = 'contact.html?product=' + encodeURIComponent(p.name);
     if (window.SSS_waHref) {
       var wa = $('m-wa');
-      wa.href = window.SSS_waHref('Hi SSS Import Export, I would like a quote for ' + p.name + ' (origin: ' + p.origin + ').');
+      wa.href = window.SSS_waHref('Hi SSS Import Export, I would like a quote for ' + p.name + '.');
     }
     modal.hidden = false;
     void modal.offsetWidth; // flush layout so the fade-in transition still plays

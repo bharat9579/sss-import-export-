@@ -151,9 +151,8 @@ def categories():
             if i not in seen:
                 seen.append(i)
         cards.append(f'''      <a class="cat" href="products.html?category={c['id']}" data-reveal>
-        <div class="cat__img">{img_set('categories', c['image'], c['name'] + ' sourced from India', '(max-width: 640px) 100vw, (max-width: 980px) 50vw, 40vw')}</div>
+        <div class="cat__img">{img_set('categories', c['image'], c['name'], '(max-width: 640px) 100vw, (max-width: 980px) 50vw, 40vw')}</div>
         <div class="cat__body">
-          <p class="cat__origin">{escape(c['origins'])}</p>
           <h3>{escape(c['name'])}</h3>
           <span class="cat__link">Explore {len(seen)} products {ICON['arrow']}</span>
         </div>
@@ -166,13 +165,12 @@ def product_grid():
     cards = []
     for p in PRODUCTS:
         cat = CATS[p['category']]
-        search = ' '.join([p['name'], cat['name'], p['origin'], p['state'], ' '.join(p['varieties'])]).lower()
-        cards.append(f'''        <article class="pcard" id="{p['id']}" data-id="{p['id']}" data-cat="{p['category']}" data-state="{escape(p['state'])}" data-search="{escape(search)}">
-          <button type="button" class="pcard__img" data-open="{p['id']}" aria-haspopup="dialog" aria-label="View details: {escape(p['name'])}">{img_set('products', p['id'], p['name'] + ' from ' + p['origin'] + ', ' + p['state'], '(max-width: 380px) 100vw, (max-width: 980px) 50vw, 25vw')}</button>
+        search = ' '.join([p['name'], cat['name'], ' '.join(p['varieties'])]).lower()
+        cards.append(f'''        <article class="pcard" id="{p['id']}" data-id="{p['id']}" data-cat="{p['category']}" data-search="{escape(search)}">
+          <button type="button" class="pcard__img" data-open="{p['id']}" aria-haspopup="dialog" aria-label="View details: {escape(p['name'])}">{img_set('products', p['id'], p['name'], '(max-width: 380px) 100vw, (max-width: 980px) 50vw, 25vw')}</button>
           <div class="pcard__body">
             <span class="pcard__cat">{escape(cat['short'])}</span>
             <h3>{escape(p['name'])}</h3>
-            <p class="pcard__origin">{escape(p['origin'])}, {escape(p['state'])}</p>
             <div class="pcard__actions">
               <button type="button" class="pcard__link" data-open="{p['id']}" aria-haspopup="dialog">Details</button>
               <a href="{contact_href(p['name'])}" class="pcard__link pcard__link--strong">Enquire {ICON['arrow']}</a>

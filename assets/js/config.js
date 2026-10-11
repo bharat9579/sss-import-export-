@@ -5,7 +5,7 @@
  */
 window.SSS_CONFIG = {
   // Digits only, with country code, no "+" or spaces. Example format: 919876543210
-  whatsappNumber: '[WHATSAPP_NUMBER]',
+  whatsappNumber: '917350319193',
   // Shown as text, e.g. "+91 98765 43210"
   phoneDisplay: '[PHONE_NUMBER]',
   // Digits with country code for tel: links, e.g. +919876543210

@@ -29,7 +29,6 @@ Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org 
 | Placeholder | What to enter |
 |---|---|
 | `[IEC_NUMBER]` | Import Export Code |
-| `[FSSAI_LICENSE_NUMBER]` | FSSAI licence number |
 | **Badges shown** | FSSAI, APEDA, IEC, Spices Board — **confirm each is actually held**; delete any that aren't (trust strip in `index.html`, footer badges in `tools/build.py`). |
 | `[CONFIRM]` ISO / HACCP | Commented out in `index.html` (trust strip). Uncomment **only** if certified. |
 

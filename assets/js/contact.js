@@ -13,7 +13,7 @@
   if (data) {
     data.categories.forEach(function (c) {
       var g = document.createElement('optgroup'); g.label = c.name;
-      var any = document.createElement('option'); any.value = c.name; any.textContent = c.name + ' — any / several';
+      var any = document.createElement('option'); any.value = c.name; any.textContent = c.name + ' (any / several)';
       g.appendChild(any);
       data.products.filter(function (p) { return p.category === c.id; }).forEach(function (p) {
         var o = document.createElement('option'); o.value = p.name; o.textContent = p.name; g.appendChild(o);
@@ -55,7 +55,7 @@
   function summary() {
     var d = new FormData(form);
     var lines = [
-      'Quote request — SSS Import Export',
+      'Quote request: SSS Import Export',
       'Name: ' + d.get('name'),
       d.get('company') ? 'Company: ' + d.get('company') : '',
       'Email: ' + d.get('email'),
@@ -70,11 +70,11 @@
   }
   function viaWhatsApp() {
     window.open('https://wa.me/' + cfg.whatsappNumber.replace(/\D/g, '') + '?text=' + encodeURIComponent(summary()), '_blank', 'noopener');
-    setStatus('WhatsApp opened with your enquiry — just press send.', true);
+    setStatus('WhatsApp opened with your enquiry. Just press send.', true);
   }
   function viaEmail() {
-    location.href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent('Quote request — ' + new FormData(form).get('product')) + '&body=' + encodeURIComponent(summary());
-    setStatus('Your email app has opened with the enquiry — just press send.', true);
+    location.href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent('Quote request: ' + new FormData(form).get('product')) + '&body=' + encodeURIComponent(summary());
+    setStatus('Your email app has opened with the enquiry. Just press send.', true);
   }
 
   /* ---------- submit */
@@ -87,7 +87,7 @@
       fetch(cfg.formEndpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (r) {
           if (!r.ok) throw new Error('HTTP ' + r.status);
-          setStatus('Thank you — your request is in. Our export desk will reply within 24 hours.', true);
+          setStatus('Thank you, your request is in. Our export desk will reply within 24 hours.', true);
           form.reset();
         })
         .catch(function () { setStatus('Sorry, that didn’t send. Please try WhatsApp or email us directly.', false); })

@@ -95,7 +95,7 @@ def header(page, base=''):
 </svg>
 <header class="nav{solid}" id="nav">
   <div class="nav__bar">
-    <a href="{'#home' if on_home else base + 'index.html'}" class="logo" aria-label="SSS Import Export — home">
+    <a href="{'#home' if on_home else base + 'index.html'}" class="logo" aria-label="SSS Import Export home">
       <img class="logo__mark" src="{base}assets/img/logo-mark-256.png" alt="" width="44" height="44">
       <span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Third generation</span></span>
     </a>
@@ -175,7 +175,7 @@ def footer(page, base=''):
 def categories():
     cards = []
     for c in DATA['categories']:
-        items = [p['name'].split(' — ')[0] for p in PRODUCTS if p['category'] == c['id']]
+        items = [p['name'].split(' (')[0] for p in PRODUCTS if p['category'] == c['id']]
         seen = []
         for i in items:
             if i not in seen:
@@ -278,7 +278,7 @@ def address():
 def org():
     o = {'@type': 'Organization', '@id': abs_url('/#organization'), 'name': BIZ['name'], 'url': abs_url('/'),
          'logo': abs_url('/assets/img/logo-full.png'),
-         'description': f'Third-generation import-export company, established {BIZ["founded"]}, trading FMCG products – onion, fresh vegetables, fruits, grains, spices and dehydrated powders – plus refurbished machines, chemicals, plastics and more, from anywhere to anywhere.',
+         'description': f'Third-generation import-export company, established {BIZ["founded"]}, trading FMCG products (onion, fresh vegetables, fruits, grains, spices and dehydrated powders) plus refurbished machines, chemicals, plastics and more, from anywhere to anywhere.',
          'foundingDate': BIZ['founded'], 'slogan': BIZ['slogan'], 'telephone': BIZ['phone'], 'address': address(),
          'sameAs': [u for u in (BIZ['instagram'], BIZ.get('linkedin')) if u],
          'areaServed': BIZ['area_served'],
@@ -434,7 +434,7 @@ def detail_page(pg):
     body = ''.join(f'\n          <p>{escape(t)}</p>' for t in pg.get('body', []))
     spec = ''.join(f'\n            <div><dt>{escape(k)}</dt><dd>{escape(v)}</dd></div>' for k, v in pg['spec'])
     if section == 'products':
-        spec += '\n            <div><dt>MOQ</dt><dd><span class="ph">[MOQ]</span> — confirmed per order</dd></div>'
+        spec += '\n            <div><dt>MOQ</dt><dd><span class="ph">[MOQ]</span>, confirmed per order</dd></div>'
     enquire_name = pg['name']
     wa_text = f'Hi SSS Import Export, I would like a quote for {pg["name"]}.'
 

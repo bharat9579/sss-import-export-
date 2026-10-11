@@ -38,8 +38,6 @@ Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org 
 | Placeholder | What to enter |
 |---|---|
 | `[YEAR]` ×2 | Year the first and second generations started |
-| `[GRANDFATHER'S NAME]` | First generation |
-| `[FATHER'S NAME]` | Second generation |
 
 ## 5. Testimonials
 

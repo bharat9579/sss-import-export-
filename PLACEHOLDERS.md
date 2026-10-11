@@ -37,7 +37,6 @@ Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org 
 
 | Placeholder | What to enter |
 |---|---|
-| `[YEAR]` ×2 | Year the first and second generations started |
 
 ## 5. Testimonials
 

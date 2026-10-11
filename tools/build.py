@@ -134,11 +134,11 @@ def footer(page, base=''):
                     for pg in PAGES_SEO if pg['slug'].startswith('products/'))
     trade = ''.join(f'<li><a href="{page_href(pg, base)}">{escape(pg["nav"])}</a></li>'
                     for pg in PAGES_SEO if not pg['slug'].startswith('products/'))
-    return f'''<footer class="footer on-dark">
+    return f'''<footer class="footer footer--gold">
   <div class="wrap">
     <div class="footer__grid footer__grid--5">
       <div>
-        <a href="{'#home' if page == 'home' else base + 'index.html'}" class="logo" aria-label="SSS Import Export home"><img class="logo__full logo__full--footer" src="{base}assets/img/sss-import-export-logo-light.png" alt="" width="592" height="180"></a>
+        <a href="{'#home' if page == 'home' else base + 'index.html'}" class="logo" aria-label="SSS Import Export home"><img class="logo__full logo__full--footer" src="{base}assets/img/sss-import-export-logo.png" alt="" width="592" height="180"></a>
         <p>A 3rd-generation Indian import-export house, established {BIZ['founded']}, supplying onion, fresh produce, grains, spices and powders to buyers in India and abroad.</p>
         <p class="footer__regs">APEDA · IEC</p>
       </div>
@@ -175,7 +175,7 @@ def footer(page, base=''):
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year>{time.strftime('%Y')}</span> SSS Import Export. All rights reserved.</span>
-      <span>IEC: <span class="ph">[IEC_NUMBER]</span></span>
+      <span>IEC: {escape(BIZ["iec"])}</span>
     </div>
   </div>
 </footer>
@@ -298,6 +298,8 @@ def org():
                         'White label food products', 'Refurbished machinery import', 'Chemicals trading', 'Plastics trading']}
     if BIZ.get('email'):
         o['email'] = BIZ['email']
+    if BIZ.get('iec'):
+        o['identifier'] = {'@type': 'PropertyValue', 'propertyID': 'IEC (Importer Exporter Code)', 'value': BIZ['iec']}
     return o
 
 

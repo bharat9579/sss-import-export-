@@ -13,7 +13,7 @@ window.SSS_CONFIG = {
   // Second phone number, shown after the first
   phone2Display: '+91 63531 81472',
   phone2Dial: '+916353181472',
-  email: '[EMAIL]',
+  email: 'connect@sssimportexport.com',
   address: 'APMC Market, Dindori, Nashik, Maharashtra',
   instagram: 'sssimportexport',
 

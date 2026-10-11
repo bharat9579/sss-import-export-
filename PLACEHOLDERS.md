@@ -28,7 +28,6 @@ Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org 
 
 | Placeholder | What to enter |
 |---|---|
-| `[IEC_NUMBER]` | Import Export Code |
 | **Badges shown** | FSSAI, APEDA, IEC, Spices Board — **confirm each is actually held**; delete any that aren't (trust strip in `index.html`, footer badges in `tools/build.py`). |
 | `[CONFIRM]` ISO / HACCP | Commented out in `index.html` (trust strip). Uncomment **only** if certified. |
 
@@ -62,7 +61,6 @@ Replace the striped **"Map embed placeholder"** block with your Google Maps `<if
 
 | Field | Status |
 |---|---|
-| `email` | **Empty** — add your business email (also set `email` in `assets/js/config.js`) |
 | `linkedin` | **Empty** — add your LinkedIn company page URL |
 | `postal_code` | **Empty** — add the pincode for APMC Market, Dindori |
 | `google_site_verification` | **Empty** — code from Google Search Console (HTML tag method) |

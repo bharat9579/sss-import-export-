@@ -1261,3 +1261,19 @@ html.sl-on .sl { position: fixed; inset: 0; z-index: 9999; display: flex; flex-d
 .menu { border-radius: 0; clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px); border-color: rgba(248, 229, 140, .22); background: linear-gradient(160deg, #06305f 0%, #001a3a 100%); }
 .menu a.menu__link[aria-current="page"] { color: var(--butter-yellow); }
 .menu__foot .btn { border-radius: 0; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+
+/* =====================================================================
+   Footer: light champagne gold
+   ===================================================================== */
+.footer--gold { position: relative; color: #4a3d1c;
+  background: radial-gradient(ellipse at 15% 0%, #fffaf0 0%, rgba(255, 250, 240, 0) 55%), linear-gradient(160deg, #fbf3d9 0%, #f4e4b4 55%, #ecd796 100%); }
+.footer--gold::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, #c9a24a, #f8e58c 35%, #b8892e 70%, #f3dc8a); }
+.footer--gold h4 { color: var(--oxford-blue); }
+.footer--gold p { color: #5a4a22; }
+.footer--gold .footer__list a, .footer--gold .footer__list span { color: #4a3d1c; transition: color .3s; }
+.footer--gold .footer__list a:hover { color: var(--oxford-blue); }
+.footer--gold .footer__contact svg { color: #a57f22; }
+.footer--gold .footer__regs { color: #8a6a1c; opacity: 1; }
+.footer--gold .footer__bottom { border-top-color: rgba(122, 94, 24, .22); color: #6b5624; }
+.footer--gold .ph { background: rgba(165, 127, 34, .14); }
+.footer--gold :focus-visible { outline-color: var(--oxford-blue); }

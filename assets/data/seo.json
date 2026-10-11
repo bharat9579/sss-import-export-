@@ -1,0 +1,589 @@
+{
+  "business": {
+    "name": "SSS Import Export",
+    "domain": "https://sssimportexport.com",
+    "phone": "+91 63531 81472",
+    "phone_dial": "+916353181472",
+    "whatsapp": "+91 73503 19193",
+    "email": "",
+    "street": "APMC Market",
+    "city": "Dindori",
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "state_code": "IN-MH",
+    "postal_code": "",
+    "lat": 20.2187,
+    "lng": 73.8351,
+    "plus_code": "7JGM6R9P+F2",
+    "founded": "2000",
+    "instagram": "https://www.instagram.com/sssimportexport",
+    "linkedin": "",
+    "slogan": "Trust. Quality. Price.",
+    "area_served": [
+      "IN",
+      "AE",
+      "MY",
+      "VN",
+      "LK",
+      "AU",
+      "Worldwide"
+    ],
+    "google_site_verification": "",
+    "ga4_id": ""
+  },
+  "home": {
+    "title": "SSS Import Export | Onion Exporter, Fresh Vegetables, Spices & Grains Supplier India",
+    "description": "Third-generation importer and exporter from India, established 2000. Onion, fresh vegetables, fruits, rice, spices, dehydrated powders and industrial goods.",
+    "keywords": "onion exporter India, onion supplier, Nashik onion exporter, fresh vegetables exporter, fresh vegetable supplier, spices exporter India, dehydrated powder supplier, grains exporter, rice exporter, import export company India, FMCG exporter, refurbished machines import, chemical supplier, plastic raw material supplier, white label food products",
+    "og_title": "SSS Import Export | Trusted Importer & Exporter from India Since 2000",
+    "og_description": "Onion, fresh vegetables, grains, spices, dehydrated powders and more. Export, domestic supply and white labelling. Trust, quality, price.",
+    "og_image": "og/sss-import-export-og-cover.jpg"
+  },
+  "pages_meta": {
+    "products": {
+      "title": "Products: Onion, Fruits, Spices & Powders | SSS Import Export",
+      "description": "Browse 33 Indian products: onions, fresh vegetables, fruits, spices, herbs and powders in premium to budget grades. Export, bulk supply and white label.",
+      "og_image": "og/indian-products-exporter-range.jpg"
+    },
+    "contact": {
+      "title": "Request a Quote | Contact SSS Import Export, Dindori, Nashik",
+      "description": "Request a quote for onions, vegetables, fruits, spices, powders or industrial goods. Share product, grade, quantity and destination; we reply in 24 hours.",
+      "og_image": "og/sss-import-export-og-cover.jpg"
+    }
+  },
+  "faq": [
+    [
+      "What products does SSS Import Export supply?",
+      "We supply onion, fresh vegetables, fruits, grains, rice, spices and dehydrated powders, along with refurbished machines, chemicals, plastics and other products sourced from anywhere to anywhere."
+    ],
+    [
+      "Do you export onions from India?",
+      "Yes. Onion is our core product. We export red and pink onions in all sizes and grades, from premium 50–60 mm double patti to budget grades."
+    ],
+    [
+      "Which countries do you supply to?",
+      "We supply across India and export to UAE (Dubai), Malaysia, Vietnam, Sri Lanka, Australia and other countries worldwide."
+    ],
+    [
+      "Do you offer white labelling?",
+      "Yes. We pack products under your brand name and packaging with our certified quality."
+    ],
+    [
+      "Are you a licensed exporter?",
+      "Yes. We hold all required licences and documentation for import and export, and we meet buyers both offline and online."
+    ]
+  ],
+  "pages": [
+    {
+      "slug": "products/onion",
+      "nav": "Onion",
+      "group": "Fresh Vegetables",
+      "product_id": "onion",
+      "name": "Red & Pink Onion",
+      "h1": "Onion exporter from India",
+      "h1_em": "Red and pink onions, every size and grade.",
+      "title": "Onion Exporter from India | Nashik Red & Pink Onion Supplier – SSS Import Export",
+      "description": "Export-quality red and pink onions, 30 to 60 mm+, from premium double patti to budget grade. Bulk export, domestic supply and white label.",
+      "og_title": "Onion Exporter from India – SSS Import Export",
+      "og_description": "Red and pink onions, all sizes and grades. Export, domestic supply and white label.",
+      "lead": "Onion is our core product. We supply red and pink onions in every size, from premium double patti export grade to budget grades, for export, domestic bulk supply and white label.",
+      "body": [
+        "Every lot is graded for size, colour and skin before it is packed, so you receive onions that match the grade you agreed. Tell us your market and price point and we will recommend the size and grade that fits."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "Nashik Red · Pink Onion · White Onion"
+        ],
+        [
+          "Sizes",
+          "30 mm to 60 mm+"
+        ],
+        [
+          "Grades",
+          "Premium double patti export grade · Standard grade · Budget grade · Sized to buyer spec"
+        ],
+        [
+          "Packaging",
+          "Mesh bags · Jute bags · Ventilated cartons · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "products/onion-exporter-india",
+      "alt": "Pile of fresh red and pink onions graded for export"
+    },
+    {
+      "slug": "products/green-chilli",
+      "nav": "Green Chilli",
+      "group": "Fresh Vegetables",
+      "product_id": "green-chilli",
+      "name": "Green Chilli (G4)",
+      "h1": "Green chilli exporter from India",
+      "h1_em": "G4 green chillies, fresh and firm.",
+      "title": "Green Chilli Exporter from India | G4 Green Chilli Supplier – SSS Import Export",
+      "description": "Fresh G4 green chillies with firm flesh and sharp heat, in premium export to value grades. Bulk export, domestic supply and white label.",
+      "og_title": "G4 Green Chilli Exporter – SSS Import Export",
+      "og_description": "Fresh G4 green chillies in premium to value grades. Export, domestic supply and white label.",
+      "lead": "Glossy green chillies with firm flesh and a clean, sharp heat, graded and packed for long journeys.",
+      "body": [
+        "We supply G4 and Jwala green chillies in premium export, standard and value grades, so you can match quality to your market and price point."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "G4 · Jwala"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade · Value grade"
+        ],
+        [
+          "Packaging",
+          "Ventilated cartons · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "products/green-chilli-exporter-india",
+      "alt": "Fresh G4 green chillies for export"
+    },
+    {
+      "slug": "products/banana",
+      "nav": "Banana",
+      "group": "Fresh Fruits",
+      "product_id": "banana",
+      "name": "G9 Banana",
+      "h1": "G9 banana exporter from India",
+      "h1_em": "Uniform hands, clean peel.",
+      "title": "G9 Banana Exporter from India | Fresh Banana Supplier – SSS Import Export",
+      "description": "G9 (Grand Naine) bananas with uniform hands and clean peel, harvested green for controlled ripening. Premium export to value grades.",
+      "og_title": "G9 Banana Exporter – SSS Import Export",
+      "og_description": "G9 bananas in premium to value grades, harvested green for controlled ripening.",
+      "lead": "Uniform hands with clean peel, harvested green for controlled ripening at destination.",
+      "body": [
+        "We supply G9 (Grand Naine) and Robusta bananas in premium export, standard and value grades, packed in cartons with liners or under your own label."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "G9 (Grand Naine) · Robusta"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade · Value grade"
+        ],
+        [
+          "Packaging",
+          "Cartons with liners · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "products/banana-exporter-india",
+      "alt": "Hands of fresh green G9 bananas for export"
+    },
+    {
+      "slug": "products/pomegranate",
+      "nav": "Pomegranate",
+      "group": "Fresh Fruits",
+      "product_id": "pomegranate",
+      "name": "Bhagwa Pomegranate",
+      "h1": "Pomegranate exporter from India",
+      "h1_em": "Deep-red Bhagwa, sweet and soft-seeded.",
+      "title": "Pomegranate Exporter from India | Bhagwa Pomegranate Supplier – SSS Import Export",
+      "description": "Deep-red Bhagwa pomegranates with glossy skin and sweet, soft-seeded arils. Premium export grades, graded by weight, in cartons.",
+      "og_title": "Bhagwa Pomegranate Exporter – SSS Import Export",
+      "og_description": "Deep-red Bhagwa pomegranates, graded by weight, export and domestic supply.",
+      "lead": "Deep-red Bhagwa fruit with glossy skin and sweet, soft-seeded arils.",
+      "body": [
+        "We supply Bhagwa, Ganesh and Arakta pomegranates in premium export and standard grades, graded by weight to your requirement."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "Bhagwa · Ganesh · Arakta"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade · Graded by weight"
+        ],
+        [
+          "Packaging",
+          "Corrugated cartons · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "products/pomegranate-exporter-india",
+      "alt": "Ripe Bhagwa pomegranates with red arils"
+    },
+    {
+      "slug": "products/coconut",
+      "nav": "Coconut",
+      "group": "Fresh Fruits",
+      "name": "Semi-Husked Coconut",
+      "h1": "Semi-husked coconut exporter",
+      "h1_em": "Fresh coconuts, packed for the journey.",
+      "title": "Semi-Husked Coconut Exporter from India – SSS Import Export",
+      "description": "Semi-husked coconuts from India for export and domestic bulk supply, in premium to budget grades. Send your quantity for today's price.",
+      "og_title": "Semi-Husked Coconut Exporter – SSS Import Export",
+      "og_description": "Semi-husked coconuts for export and domestic bulk supply.",
+      "lead": "Semi-husked coconuts for export and domestic bulk supply, in grades to suit your market.",
+      "body": [
+        "Share the quantity, size and destination you need and we will come back with availability, packing options and price."
+      ],
+      "spec": [
+        [
+          "Type",
+          "Semi-husked coconut"
+        ],
+        [
+          "Grades",
+          "Premium to budget grades"
+        ],
+        [
+          "Packaging",
+          "Confirmed per order"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply"
+        ]
+      ],
+      "image": "pages/semi-husked-coconut-exporter-india",
+      "alt": "Truck loaded with semi-husked coconuts for bulk supply"
+    },
+    {
+      "slug": "products/drumstick",
+      "nav": "Drumstick",
+      "group": "Fresh Vegetables",
+      "product_id": "drumstick",
+      "name": "Drumstick (Moringa)",
+      "h1": "Drumstick exporter from India",
+      "h1_em": "Tender moringa pods, harvested young.",
+      "title": "Drumstick Exporter from India | Moringa Drumstick – SSS Import Export",
+      "description": "Tender drumstick (moringa) pods harvested young. PKM-1, PKM-2 and local varieties in premium export and standard grades.",
+      "og_title": "Drumstick (Moringa) Exporter – SSS Import Export",
+      "og_description": "Tender drumstick pods in premium export and standard grades.",
+      "lead": "Tender, straight moringa pods harvested young for soft flesh.",
+      "body": [
+        "We supply PKM-1, PKM-2 and local drumstick in premium export and standard grades, packed in ventilated cartons or cut-to-length packs."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "PKM-1 · PKM-2 · Local"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade"
+        ],
+        [
+          "Packaging",
+          "Ventilated cartons · Cut-to-length packs · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "products/drumstick-exporter-india",
+      "alt": "Fresh green drumstick (moringa) pods for export"
+    },
+    {
+      "slug": "products/rice",
+      "nav": "Rice",
+      "group": "Grains",
+      "name": "Rice (Basmati & Non-Basmati)",
+      "h1": "Rice exporter from India",
+      "h1_em": "Basmati and non-basmati.",
+      "title": "Rice Exporter from India | Basmati & Non-Basmati Supplier – SSS Import Export",
+      "description": "Basmati and non-basmati rice from India for export and domestic bulk supply, in premium to budget grades. Get today's price.",
+      "og_title": "Basmati & Non-Basmati Rice Exporter – SSS Import Export",
+      "og_description": "Basmati and non-basmati rice for export and domestic bulk supply.",
+      "lead": "Basmati and non-basmati rice for export and domestic bulk supply, in grades for every budget.",
+      "body": [
+        "Tell us the variety, grade, quantity and destination you need and we will share availability, packing options and price."
+      ],
+      "spec": [
+        [
+          "Varieties",
+          "Basmati · Non-Basmati"
+        ],
+        [
+          "Grades",
+          "Premium to budget grades"
+        ],
+        [
+          "Packaging",
+          "Confirmed per order · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "image": "pages/rice-exporter-india",
+      "alt": "Close-up of white rice grains"
+    },
+    {
+      "slug": "products/spices",
+      "nav": "Spices",
+      "group": "Spices",
+      "name": "Red Chilli & Indian Spices",
+      "h1": "Indian spices exporter",
+      "h1_em": "Red chilli, whole spices and spice powders.",
+      "title": "Indian Spices Exporter | Red Chilli & Spice Powder Supplier – SSS Import Export",
+      "description": "Red chilli, turmeric, cumin, coriander, black pepper, cardamom, cloves and spice powders. Cleaned, sorted, graded; bulk or your own label.",
+      "og_title": "Indian Spices Exporter – SSS Import Export",
+      "og_description": "Red chilli, whole spices and spice powders, cleaned, sorted and graded.",
+      "lead": "Whole spices and spice powders, cleaned, sorted and graded, in bulk or under your own label.",
+      "body": [
+        "Choose from red chillies, turmeric, cumin, coriander, black pepper, green cardamom and cloves, or milled powders made from the same raw material."
+      ],
+      "spec": [
+        [
+          "Range",
+          "Red chilli · Turmeric · Cumin · Coriander · Black pepper · Green cardamom · Cloves · Spice powders"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade · Value grade"
+        ],
+        [
+          "Packaging",
+          "Jute bags · PP bags · Cartons · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "list": [
+        "chilli-teja",
+        "chilli-guntur",
+        "turmeric",
+        "cumin",
+        "coriander",
+        "black-pepper",
+        "cardamom",
+        "cloves",
+        "chilli-powder",
+        "turmeric-powder",
+        "coriander-powder",
+        "cumin-powder"
+      ],
+      "image": "categories/indian-spices-exporter",
+      "alt": "Indian whole spices and red chillies for export"
+    },
+    {
+      "slug": "products/dehydrated-powders",
+      "nav": "Dehydrated Powders",
+      "group": "Dehydrated Powders",
+      "name": "Dehydrated Onion, Garlic & Vegetable Powders",
+      "h1": "Dehydrated powder supplier",
+      "h1_em": "Onion, garlic and vegetable powders.",
+      "title": "Dehydrated Onion & Vegetable Powder Supplier India – SSS Import Export",
+      "description": "Dehydrated onion and garlic powder, flakes and granules, and moringa powder. Premium export grades in bulk or under your own label.",
+      "og_title": "Dehydrated Onion, Garlic & Vegetable Powders – SSS Import Export",
+      "og_description": "Onion, garlic and vegetable powders, flakes and granules in bulk or private label.",
+      "lead": "Dehydrated onion, garlic and vegetable powders, flakes and granules, in bulk or under your own label.",
+      "body": [
+        "Our dehydrated range is milled into free-flowing powders or supplied as flakes and granules, in premium export and standard grades."
+      ],
+      "spec": [
+        [
+          "Range",
+          "Onion powder · Garlic powder · Flakes & granules · Moringa powder"
+        ],
+        [
+          "Grades",
+          "Premium export grade · Standard grade"
+        ],
+        [
+          "Packaging",
+          "Bulk bags & cartons · Private label"
+        ],
+        [
+          "Supply",
+          "Export · Domestic bulk supply · White label"
+        ]
+      ],
+      "list": [
+        "onion-powder",
+        "garlic-powder",
+        "moringa-powder"
+      ],
+      "image": "products/onion-powder-exporter-india",
+      "alt": "Dehydrated onion powder in a bowl"
+    },
+    {
+      "slug": "industrial/refurbished-machines",
+      "nav": "Refurbished Machines",
+      "group": "Industrial Trading",
+      "name": "Refurbished Machines",
+      "h1": "Refurbished machines, import and export",
+      "h1_em": "Reliable equipment at a better price.",
+      "title": "Refurbished Machines Import & Export – SSS Import Export",
+      "description": "We source and trade refurbished industrial machines for buyers in India and abroad. Share the machine you need for availability and price.",
+      "og_title": "Refurbished Machines Import & Export – SSS Import Export",
+      "og_description": "Refurbished industrial machines sourced from anywhere to anywhere.",
+      "lead": "Alongside food, we trade refurbished machines for buyers who need dependable equipment at a better price, sourced from anywhere and delivered anywhere.",
+      "body": [
+        "Tell us the machine type, make or model, capacity, budget and destination. We will come back with available options and a price, and handle the import or export paperwork."
+      ],
+      "spec": [
+        [
+          "What we trade",
+          "Refurbished industrial machines"
+        ],
+        [
+          "Send us",
+          "Machine type · Make / model · Capacity · Budget · Destination"
+        ],
+        [
+          "Supply",
+          "Import to India · Export from India"
+        ],
+        [
+          "Price",
+          "Quoted per enquiry"
+        ]
+      ],
+      "image": "pages/refurbished-industrial-machines-import-export",
+      "alt": "Row of industrial lathe machines in a workshop"
+    },
+    {
+      "slug": "industrial/chemicals",
+      "nav": "Chemicals",
+      "group": "Industrial Trading",
+      "name": "Chemicals",
+      "h1": "Chemicals supplier and trader",
+      "h1_em": "Sourced to your specification.",
+      "title": "Chemicals Supplier & Trader India – SSS Import Export",
+      "description": "We trade chemicals for buyers in India and abroad. Share the chemical, grade, quantity and destination for availability and price.",
+      "og_title": "Chemicals Supplier & Trader – SSS Import Export",
+      "og_description": "Chemicals sourced to your specification, for import and export.",
+      "lead": "We trade chemicals for buyers in India and abroad, sourced to the specification you need.",
+      "body": [
+        "Share the chemical name, grade or purity, quantity, packing and destination. We will confirm availability, documentation and price."
+      ],
+      "spec": [
+        [
+          "What we trade",
+          "Chemicals"
+        ],
+        [
+          "Send us",
+          "Chemical name · Grade / purity · Quantity · Packing · Destination"
+        ],
+        [
+          "Supply",
+          "Import to India · Export from India · Domestic supply"
+        ],
+        [
+          "Price",
+          "Quoted per enquiry"
+        ]
+      ],
+      "image": "pages/industrial-chemicals-supplier-india",
+      "alt": "Steel drums used for storing and shipping chemicals"
+    },
+    {
+      "slug": "industrial/plastics",
+      "nav": "Plastics",
+      "group": "Industrial Trading",
+      "name": "Plastics",
+      "h1": "Plastic raw material supplier",
+      "h1_em": "Plastics trading, import and export.",
+      "title": "Plastic Raw Material Supplier India – SSS Import Export",
+      "description": "We trade plastics and plastic raw materials in India and abroad. Share the material, grade, quantity and destination for a price.",
+      "og_title": "Plastic Raw Material Supplier – SSS Import Export",
+      "og_description": "Plastics and plastic raw materials for import, export and domestic supply.",
+      "lead": "We trade plastics and plastic raw materials for manufacturers and traders in India and abroad.",
+      "body": [
+        "Tell us the material, grade, form, quantity and destination. We will come back with availability and price."
+      ],
+      "spec": [
+        [
+          "What we trade",
+          "Plastics · Plastic raw materials"
+        ],
+        [
+          "Send us",
+          "Material · Grade · Form · Quantity · Destination"
+        ],
+        [
+          "Supply",
+          "Import to India · Export from India · Domestic supply"
+        ],
+        [
+          "Price",
+          "Quoted per enquiry"
+        ]
+      ],
+      "image": "pages/plastic-granules-raw-material-supplier",
+      "alt": "White plastic granules used as raw material"
+    },
+    {
+      "slug": "services/white-label",
+      "nav": "White Label",
+      "group": "Services",
+      "service": true,
+      "name": "White Labelling / Private Label",
+      "h1": "White label and private label",
+      "h1_em": "Your brand, our certified quality.",
+      "title": "White Label & Private Label Products India – SSS Import Export",
+      "description": "We pack onions, spices, powders, rice and more under your brand name and packaging, with our certified quality. Export or domestic.",
+      "og_title": "White Label & Private Label – SSS Import Export",
+      "og_description": "Your brand name and packaging, with our certified quality.",
+      "lead": "We pack products under your brand name and packaging, with our certified quality.",
+      "body": [
+        "Choose the product and grade, share your brand and packaging design, and we pack, check and ship it ready for your market, for export or domestic sale."
+      ],
+      "steps": [
+        [
+          "Choose",
+          "Pick the product and grade from our range."
+        ],
+        [
+          "Brand",
+          "Share your brand name, artwork and packaging format."
+        ],
+        [
+          "Pack",
+          "We pack and quality-check every lot under your label."
+        ],
+        [
+          "Ship",
+          "We export or deliver it to you, ready to sell."
+        ]
+      ],
+      "spec": [
+        [
+          "Products",
+          "Onions · Spices · Powders · Rice · Fresh produce"
+        ],
+        [
+          "You provide",
+          "Brand name · Artwork · Packaging format"
+        ],
+        [
+          "Supply",
+          "Export · Domestic"
+        ]
+      ],
+      "image": "pages/white-label-private-label-packaging",
+      "alt": "Spice pouches printed with a buyer's own brand for white label supply"
+    }
+  ]
+}

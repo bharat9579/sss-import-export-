@@ -7,11 +7,11 @@ window.SSS_CONFIG = {
   // Digits only, with country code, no "+" or spaces. Example format: 919876543210
   whatsappNumber: '917350319193',
   // Shown as text, e.g. "+91 98765 43210"
-  phoneDisplay: '[PHONE_NUMBER]',
+  phoneDisplay: '+91 63531 81472',
   // Digits with country code for tel: links, e.g. +919876543210
-  phoneDial: '[PHONE_DIAL]',
+  phoneDial: '+916353181472',
   email: '[EMAIL]',
-  address: '[ADDRESS]',
+  address: 'APMC Market, Dindori, Nashik, Maharashtra',
   instagram: 'sssimportexport',
 
   // Optional: a form endpoint (Formspree, Web3Forms, Getform, etc.) for the quote form.

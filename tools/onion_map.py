@@ -1,7 +1,7 @@
 """Generate the onion-belt satellite flyover (SVG) for the legacy section of index.html.
 
 Writes the SVG between <!-- BEGIN:onion-map --> and <!-- END:onion-map --> in index.html.
-The base image is assets/img/onion-belt-satellite.webp: Sentinel-2 cloudless 2016 by EOX
+The base image is assets/img/nashik-onion-belt-satellite-map.webp: Sentinel-2 cloudless 2016 by EOX
 (CC BY 4.0), zoom-11 Web Mercator tiles stitched starting at tile SAT_ORIGIN. Town positions
 are real coordinates projected into the same space, so pins sit on the right spot.
 
@@ -71,7 +71,7 @@ def build():
            '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity=".55"/></filter></defs>',
            f'<rect width="{W}" height="{H}" fill="#2a2a22"/>',
            '<g class="om-cam"><g class="om-drift">',
-           f'<image class="om-sat" data-href="assets/img/onion-belt-satellite.webp" x="{ix:.1f}" y="{iy:.1f}" '
+           f'<image class="om-sat" data-href="assets/img/nashik-onion-belt-satellite-map.webp" x="{ix:.1f}" y="{iy:.1f}" '
            f'width="{iw:.1f}" height="{ih:.1f}" preserveAspectRatio="none"/>']
 
     # routes from each town into the Nashik hub

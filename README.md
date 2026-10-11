@@ -74,3 +74,10 @@ Home hero onion photos from [Wikimedia Commons](https://commons.wikimedia.org):
 Replace these with the company's own Nashik onion photos when available.
 
 Legacy section satellite flyover: EOxCloudless 2016 (https://cloudless.eox.at) by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2016, CC BY 4.0 (credited in the map caption). Regenerate the map overlay with `python3 tools/onion_map.py`.
+
+## SEO
+
+- Business details, homepage/page titles, FAQ and the 13 product/trading/service pages are defined in `assets/data/seo.json`.
+- `python3 tools/build.py` writes the SEO `<head>` (meta, Open Graph, JSON-LD) into every page, generates `products/*.html`, `industrial/*.html`, `services/white-label.html`, and writes `sitemap.xml`, `robots.txt` and `vercel.json` (clean URLs such as `/products/onion`).
+- Share images (1200×630) live in `assets/img/og/`.
+- New page photos (coconut, rice, machines, chemicals, plastics) are CC0 / public domain from Wikimedia Commons; the white-label image is a mockup made from the site's own photos.

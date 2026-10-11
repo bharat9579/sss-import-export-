@@ -61,3 +61,16 @@ Replace the striped **"Map embed placeholder"** block with your Google Maps `<if
 - **Product data** — `assets/data/products.json`: varieties, grades and packaging are typical industry options; adjust to exactly what you supply. Origin stories use well-known growing regions (Nashik, Guntur, Unjha, Erode, Ratnagiri…) — confirm they match where you actually buy.
 - **Stats** — 7+ years, 3rd generation, 6+ countries come from your brief; the product count updates automatically from the data file.
 - **Photos** — all are royalty-free stock (Pexels, free for commercial use, no attribution required). A few are stand-ins: *Ashwagandha* (generic dried roots), *Onion powder* (sliced onion), *Garlic powder* (garlic cloves), *Coriander powder* (coriander & turmeric on spoons). Your own product photos will look better and build more trust.
+
+## SEO settings — `assets/data/seo.json` (then run `python3 tools/build.py`)
+
+| Field | Status |
+|---|---|
+| `email` | **Empty** — add your business email (also set `email` in `assets/js/config.js`) |
+| `linkedin` | **Empty** — add your LinkedIn company page URL |
+| `postal_code` | **Empty** — add the pincode for APMC Market, Dindori |
+| `google_site_verification` | **Empty** — code from Google Search Console (HTML tag method) |
+| `ga4_id` | **Empty** — Google Analytics 4 Measurement ID, e.g. `G-XXXXXXXXXX` |
+| Opening hours | Not published; add `openingHoursSpecification` in `tools/build.py` once confirmed |
+
+Search Console and Analytics tags are only added to the pages once these fields are filled in.

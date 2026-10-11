@@ -75,7 +75,7 @@
     if (!p) return;
     lastFocus = document.activeElement;
     var img = $('m-img');
-    img.src = 'assets/img/products/' + p.id + '-1600.webp';
+    img.src = 'assets/img/products/' + p.img + '-1600.webp';
     img.alt = p.name;
     $('m-cat').textContent = catName[p.category].name;
     $('m-title').textContent = p.name;

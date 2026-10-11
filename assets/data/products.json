@@ -1,10 +1,10 @@
 {
   "categories": [
-    { "id": "vegetables", "name": "Fresh Vegetables", "short": "Vegetables", "image": "cat-vegetables", "origins": "Nashik · Kolar · Agra · Mandsaur", "desc": "Farm-fresh staples graded for size, colour and shelf life — cooled and packed for long journeys." },
-    { "id": "fruits", "name": "Fresh Fruits", "short": "Fruits", "image": "cat-fruits", "origins": "Ratnagiri · Gir · Jalgaon · Solapur", "desc": "All-natural fruit from India's celebrated orchards, harvested at the right maturity for export." },
-    { "id": "spices", "name": "Spices", "short": "Spices", "image": "cat-spices", "origins": "Guntur · Erode · Unjha · Idukki", "desc": "Whole spices bought at the source markets that set India's prices — cleaned, sorted and graded." },
-    { "id": "herbs", "name": "Herbs", "short": "Herbs", "image": "cat-herbs", "origins": "Tamil Nadu · Neemuch · Barabanki", "desc": "Culinary and Ayurvedic herbs — fresh leaves and dried roots — from their traditional growing belts." },
-    { "id": "powders", "name": "Powders", "short": "Powders", "image": "cat-powders", "origins": "Guntur · Erode · Mahuva · Unjha", "desc": "Spices and dehydrated produce milled from origin-sourced raw material, packed retail-ready or in bulk." }
+    { "id": "vegetables", "name": "Fresh Vegetables", "short": "Vegetables", "image": "fresh-vegetables-exporter-india", "origins": "Nashik · Kolar · Agra · Mandsaur", "desc": "Farm-fresh staples graded for size, colour and shelf life — cooled and packed for long journeys." },
+    { "id": "fruits", "name": "Fresh Fruits", "short": "Fruits", "image": "fresh-fruits-exporter-india", "origins": "Ratnagiri · Gir · Jalgaon · Solapur", "desc": "All-natural fruit from India's celebrated orchards, harvested at the right maturity for export." },
+    { "id": "spices", "name": "Spices", "short": "Spices", "image": "indian-spices-exporter", "origins": "Guntur · Erode · Unjha · Idukki", "desc": "Whole spices bought at the source markets that set India's prices — cleaned, sorted and graded." },
+    { "id": "herbs", "name": "Herbs", "short": "Herbs", "image": "indian-herbs-supplier", "origins": "Tamil Nadu · Neemuch · Barabanki", "desc": "Culinary and Ayurvedic herbs — fresh leaves and dried roots — from their traditional growing belts." },
+    { "id": "powders", "name": "Powders", "short": "Powders", "image": "spice-and-dehydrated-powders-supplier", "origins": "Guntur · Erode · Mahuva · Unjha", "desc": "Spices and dehydrated produce milled from origin-sourced raw material, packed retail-ready or in bulk." }
   ],
   "products": [
     { "id": "onion", "name": "Onion", "category": "vegetables", "origin": "Nashik", "state": "Maharashtra",

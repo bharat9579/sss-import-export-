@@ -63,8 +63,9 @@ See **[PLACEHOLDERS.md](PLACEHOLDERS.md)** — every value to fill in, and where
 
 Photography: [Pexels](https://www.pexels.com) (free for commercial use). World map built from [Natural Earth](https://www.naturalearthdata.com) data (public domain) via `world-atlas`.
 
+Home hero background: "CMA CGM Seine au port du Havre", Wikimedia Commons, CC0.
+
 Home hero onion photos from [Wikimedia Commons](https://commons.wikimedia.org):
-- Background, "India - Koyambedu Market - Onions 08", McKay Savage, CC BY 2.0
 - `hero/onion-big`, "Baramati, Maharashtra, India. 14 onions", Frederick Noronha, CC BY-SA 4.0
 - `hero/onion-pile`, "Onions on a trolley in India", Ravi Dwivedi, CC BY-SA 4.0
 - `hero/onion-field`, "Onion farming", Gajanan Jagannath Jagdale, CC0

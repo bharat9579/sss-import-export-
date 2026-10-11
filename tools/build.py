@@ -74,7 +74,7 @@ def header(page):
 <header class="nav{solid}" id="nav">
   <div class="nav__bar">
     <a href="{'#home' if page == 'home' else 'index.html'}" class="logo" aria-label="SSS Import Export — home">
-      <span class="logo__mark" aria-hidden="true">SSS</span>
+      <img class="logo__mark" src="assets/img/logo-mark-256.png" alt="" width="44" height="44">
       <span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Third generation</span></span>
     </a>
     <nav class="nav__links" aria-label="Main">{nav}</nav>
@@ -103,7 +103,7 @@ def footer(page):
   <div class="wrap">
     <div class="footer__grid">
       <div>
-        <a href="{'#home' if page == 'home' else 'index.html'}" class="logo"><span class="logo__mark" aria-hidden="true">SSS</span><span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Quality assured · priced for you</span></span></a>
+        <a href="{'#home' if page == 'home' else 'index.html'}" class="logo"><img class="logo__mark" src="assets/img/logo-mark-256.png" alt="" width="44" height="44"><span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Quality assured · priced for you</span></span></a>
         <p>A 3rd-generation Indian import-export house supplying origin-sourced fresh produce, spices, herbs and powders to buyers in India and abroad.</p>
         <p class="footer__regs">FSSAI · APEDA · IEC · Spices Board</p>
       </div>
@@ -189,7 +189,7 @@ def ld(obj):
 
 ORG = {
     '@context': 'https://schema.org', '@type': 'Organization', 'name': 'SSS Import Export',
-    'url': '[SITE_URL]', 'logo': '[SITE_URL]/assets/img/favicon.svg',
+    'url': '[SITE_URL]', 'logo': '[SITE_URL]/assets/img/logo-full.png',
     'description': '3rd-generation Indian import-export house supplying origin-sourced fresh vegetables, fruits, spices, herbs and powders.',
     'areaServed': ['India', 'United Arab Emirates', 'Malaysia', 'Vietnam', 'Sri Lanka', 'Australia'],
     'sameAs': ['https://instagram.com/sssimportexport'],

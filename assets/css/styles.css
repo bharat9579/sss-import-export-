@@ -869,3 +869,8 @@ h3 { font-weight: 500; letter-spacing: -.015em; }
   .pcard__actions { flex-direction: row; gap: 16px; }
   .pcard__link { font-size: .8rem; }
 }
+
+/* Brand logo: the diamond mark sits on a white tile so the blue border reads on the dark navy UI */
+.logo__mark { width: 44px; height: 44px; padding: 3px; border-radius: 12px; background: #fff; object-fit: contain; display: block;
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, .5); }
+@media (max-width: 760px) { .logo__mark { width: 38px; height: 38px; padding: 2px; border-radius: 10px; } }

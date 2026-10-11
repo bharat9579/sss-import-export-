@@ -20,7 +20,7 @@ How the quote form sends: **formEndpoint** if set → otherwise **WhatsApp** wit
 
 | Setting | What to enter |
 |---|---|
-| `SITE_URL` | Your final domain, e.g. `https://www.sssimportexport.com` (no trailing slash) |
+| `SITE_URL` | Your final domain, e.g. `https://www.sssimportexport.in` (no trailing slash) |
 
 Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org URLs (82 places) and writes `sitemap.xml` and `robots.txt`.
 

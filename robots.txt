@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sssimportexport.com/sitemap.xml
+Sitemap: https://sssimportexport.in/sitemap.xml

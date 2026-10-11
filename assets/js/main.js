@@ -168,6 +168,29 @@
   /* ------------------------------------------------ nav: glass on scroll + mobile menu */
   var nav = document.getElementById('nav');
   var onScroll = function () { if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 40); };
+
+  // gold diamond indicator glides under the hovered / current nav link
+  (function () {
+    var links = nav && nav.querySelector('.nav__links');
+    var ind = links && links.querySelector('.nav__ind');
+    if (!ind) return;
+    var current = links.querySelector('a[aria-current="page"]');
+    var moveTo = function (a, instant) {
+      if (!a) { ind.style.opacity = 0; return; }
+      if (instant) ind.style.transition = 'none';
+      ind.style.opacity = 1;
+      ind.style.transform = 'translateX(' + (a.offsetLeft + a.offsetWidth / 2) + 'px)';
+      if (instant) { void ind.offsetWidth; ind.style.transition = ''; }
+    };
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('mouseenter', function () { moveTo(a); });
+      a.addEventListener('focus', function () { moveTo(a); });
+    });
+    links.addEventListener('mouseleave', function () { moveTo(current); });
+    window.addEventListener('resize', function () { moveTo(current, true); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { moveTo(current, true); });
+    moveTo(current, true);
+  })();
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 

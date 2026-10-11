@@ -82,8 +82,8 @@ def header(page, base=''):
         ('Contact', f'{base}contact.html', page == 'contact'),
     ]
     ac = ' aria-current="page"'
-    nav = ''.join(f'<a href="{h}"{ac if cur and page != "detail" else ""}>{t}</a>' for t, h, cur in links)
-    menu = ''.join(f'<a class="menu__link" href="{h}"{ac if cur and page != "detail" else ""}>{t}</a>' for t, h, cur in links)
+    nav = ''.join(f'<a href="{h}"{ac if cur else ""}>{t}</a>' for t, h, cur in links)
+    menu = ''.join(f'<a class="menu__link" href="{h}"{ac if cur else ""}>{t}</a>' for t, h, cur in links)
     solid = '' if on_home else ' nav--solid'
     return f'''<a class="skip-link" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -94,16 +94,27 @@ def header(page, base=''):
   </filter>
 </svg>
 <header class="nav{solid}" id="nav">
+  <div class="nav__top">
+    <div class="nav__top-in">
+      <span class="nav__top-tag"><i aria-hidden="true"></i>Third-generation import export house &middot; Est. {BIZ['founded']}</span>
+      <span class="nav__top-links">
+        <a href="#" data-tel>{ICON['phone']}<span data-cfg="phoneDisplay">{escape(BIZ['phone'])}</span></a>
+        <a href="#" data-wa>{ICON['wa']}WhatsApp</a>
+        <a href="{BIZ['instagram']}" target="_blank" rel="noopener">{ICON['ig']}Instagram</a>
+      </span>
+    </div>
+  </div>
   <div class="nav__bar">
     <a href="{'#home' if on_home else base + 'index.html'}" class="logo" aria-label="SSS Import Export home">
       <img class="logo__full" src="{base}assets/img/sss-import-export-logo-light.png" alt="" width="592" height="180">
     </a>
-    <nav class="nav__links" aria-label="Main">{nav}</nav>
+    <nav class="nav__links" aria-label="Main">{nav}<span class="nav__ind" aria-hidden="true"><i></i></span></nav>
     <div class="nav__actions">
-      <a href="{base}contact.html" class="btn btn--butter btn--sm nav__cta" data-magnetic>Request a Quote</a>
+      <a href="{base}contact.html" class="nav__cta"><span>Request a Quote</span>{ICON['arrow']}</a>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
+  <span class="nav__line" aria-hidden="true"></span>
 </header>
 <div class="menu-scrim" data-menu-close></div>
 <nav class="menu" id="menu" aria-label="Mobile">

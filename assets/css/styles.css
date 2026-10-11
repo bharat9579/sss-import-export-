@@ -1117,3 +1117,38 @@ html.sl-on .sl { position: fixed; inset: 0; z-index: 9999; display: flex; flex-d
 @keyframes sl-shine { to { background-position: -130% 0; } }
 @keyframes sl-word { to { clip-path: inset(0 0 0 0); opacity: 1; } }
 @keyframes sl-tag { to { opacity: 1; transform: none; } }
+
+/* =====================================================================
+   Hero "Call now" button: glass pill, ringing phone with sound waves,
+   butter fill sweeps in on hover
+   ===================================================================== */
+.call-btn { position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; gap: 14px; min-height: 58px; padding: 6px 26px 6px 6px; border-radius: 100px;
+  color: var(--ivory); text-decoration: none; background: rgba(255, 255, 255, .08); border: 1px solid rgba(248, 229, 140, .45);
+  -webkit-backdrop-filter: blur(14px) saturate(160%); backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 18px 40px -18px rgba(0, 10, 30, .8); transition: color .45s var(--ease), border-color .45s var(--ease), transform .45s var(--ease); }
+.call-btn::before { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: linear-gradient(100deg, var(--butter-yellow), #fff3b8);
+  transform: translateX(-101%); transition: transform .6s var(--ease); }
+.call-btn::after { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, .22) 50%, transparent 70%) no-repeat; background-size: 220% 100%; background-position: 160% 0; animation: call-shine 5s ease-in-out 2s infinite; }
+.call-btn:hover, .call-btn:focus-visible { color: var(--oxford-deep); border-color: var(--butter-yellow); transform: translateY(-2px); }
+.call-btn:hover::before, .call-btn:focus-visible::before { transform: translateX(0); }
+.call-btn__icon { position: relative; flex: 0 0 46px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; color: var(--oxford-deep);
+  background: radial-gradient(circle at 35% 30%, #fffbe0, var(--butter-yellow) 55%, var(--butter-deep)); box-shadow: 0 6px 16px -6px rgba(233, 207, 92, .9); transition: background .45s var(--ease), color .45s var(--ease); }
+.call-btn__icon svg { width: 21px; height: 21px; position: relative; z-index: 1; animation: call-ring 3.2s ease-in-out 1s infinite; transform-origin: 50% 50%; }
+.call-btn__wave { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid var(--butter-yellow); opacity: 0; animation: call-wave 3.2s ease-out 1s infinite; }
+.call-btn__wave--b { animation-delay: 1.35s; }
+.call-btn:hover .call-btn__icon { background: var(--oxford-deep); color: var(--butter-yellow); }
+.call-btn:hover .call-btn__wave { border-color: var(--oxford-deep); }
+.call-btn__text { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.call-btn__text small { font-size: .62rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--butter-yellow); transition: color .45s var(--ease); }
+.call-btn__text strong { margin-top: 3px; font-size: 1.02rem; font-weight: 600; letter-spacing: .02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.call-btn:hover .call-btn__text small { color: var(--oxford-mid); }
+@keyframes call-ring { 0%, 52%, 100% { transform: rotate(0); } 4%, 12%, 20%, 28% { transform: rotate(-16deg); } 8%, 16%, 24%, 32% { transform: rotate(16deg); } 36% { transform: rotate(0); } }
+@keyframes call-wave { 0% { opacity: .85; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.9); } }
+@keyframes call-shine { 0%, 70% { background-position: 160% 0; } 100% { background-position: -60% 0; } }
+@media (max-width: 640px) {
+  .hero__actions .call-btn { flex: 1 1 100%; justify-content: center; padding-right: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .call-btn__icon svg, .call-btn__wave, .call-btn::after { animation: none; }
+}

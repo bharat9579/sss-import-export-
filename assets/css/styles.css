@@ -1181,3 +1181,8 @@ html.sl-on .sl { position: fixed; inset: 0; z-index: 9999; display: flex; flex-d
 .cat:nth-child(1), .cat:nth-child(2) { min-height: 450px; }
 @media (max-width: 980px) { .cat, .cat:nth-child(1), .cat:nth-child(2) { min-height: 350px; } }
 @media (max-width: 640px) { .cat, .cat:nth-child(1), .cat:nth-child(2), .cat:nth-child(5) { min-height: 300px; } }
+
+/* Header and footer: horizontal SSS Import & Export logo (transparent, ivory + gold) */
+.logo__full { display: block; height: 58px; width: auto; }
+.logo__full--footer { height: 64px; }
+@media (max-width: 760px) { .logo__full { height: 42px; } .logo__full--footer { height: 56px; } }

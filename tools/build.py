@@ -96,8 +96,7 @@ def header(page, base=''):
 <header class="nav{solid}" id="nav">
   <div class="nav__bar">
     <a href="{'#home' if on_home else base + 'index.html'}" class="logo" aria-label="SSS Import Export home">
-      <img class="logo__mark" src="{base}assets/img/logo-mark-256.png" alt="" width="44" height="44">
-      <span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Third generation</span></span>
+      <img class="logo__full" src="{base}assets/img/sss-import-export-logo-light.png" alt="" width="523" height="180">
     </a>
     <nav class="nav__links" aria-label="Main">{nav}</nav>
     <div class="nav__actions">
@@ -128,7 +127,7 @@ def footer(page, base=''):
   <div class="wrap">
     <div class="footer__grid footer__grid--5">
       <div>
-        <a href="{'#home' if page == 'home' else base + 'index.html'}" class="logo"><img class="logo__mark" src="{base}assets/img/logo-mark-256.png" alt="" width="44" height="44"><span class="logo__text"><span class="logo__name">SSS Import Export</span><span class="logo__sub">Quality assured · priced for you</span></span></a>
+        <a href="{'#home' if page == 'home' else base + 'index.html'}" class="logo" aria-label="SSS Import Export home"><img class="logo__full logo__full--footer" src="{base}assets/img/sss-import-export-logo-light.png" alt="" width="523" height="180"></a>
         <p>A 3rd-generation Indian import-export house, established {BIZ['founded']}, supplying onion, fresh produce, grains, spices and powders to buyers in India and abroad.</p>
         <p class="footer__regs">APEDA · IEC</p>
       </div>

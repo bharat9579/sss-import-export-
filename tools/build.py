@@ -156,6 +156,7 @@ def footer(page, base=''):
         <ul class="footer__list footer__contact">
           <li>{ICON['pin']}<span data-cfg="address">[ADDRESS]</span></li>
           <li>{ICON['phone']}<a href="#" data-tel data-cfg="phoneDisplay">[PHONE_NUMBER]</a></li>
+          <li>{ICON['phone']}<a href="#" data-tel="2" data-cfg="phone2Display">[PHONE_NUMBER]</a></li>
           <li>{ICON['wa']}<a href="#" data-wa>WhatsApp us</a></li>
           <li>{ICON['mail']}<a href="#" data-mail data-cfg="email">[EMAIL]</a></li>
           <li>{ICON['ig']}<a href="{BIZ['instagram']}" target="_blank" rel="noopener">@sssimportexport</a></li>
@@ -280,6 +281,7 @@ def org():
          'logo': abs_url('/assets/img/logo-full.png'),
          'description': f'Third-generation import-export company, established {BIZ["founded"]}, trading FMCG products (onion, fresh vegetables, fruits, grains, spices and dehydrated powders) plus refurbished machines, chemicals, plastics and more, from anywhere to anywhere.',
          'foundingDate': BIZ['founded'], 'slogan': BIZ['slogan'], 'telephone': BIZ['phone'], 'address': address(),
+         'contactPoint': [{'@type': 'ContactPoint', 'telephone': t, 'contactType': 'sales', 'areaServed': 'Worldwide', 'availableLanguage': ['English', 'Hindi', 'Marathi']} for t in (BIZ['phone'], BIZ.get('phone2')) if t],
          'sameAs': [u for u in (BIZ['instagram'], BIZ.get('linkedin')) if u],
          'areaServed': BIZ['area_served'],
          'knowsAbout': ['Onion export', 'Fresh vegetables export', 'Spices export', 'Grain export', 'Dehydrated powders',

@@ -20,7 +20,7 @@
     a.href = waHref(a.getAttribute('data-wa-text') || 'Hi SSS Import Export, I would like to enquire about your products.');
     if (isSet(cfg.whatsappNumber)) { a.target = '_blank'; a.rel = 'noopener'; }
   });
-  document.querySelectorAll('[data-tel]').forEach(function (a) { a.href = isSet(cfg.phoneDial) ? 'tel:' + cfg.phoneDial : 'contact.html'; });
+  document.querySelectorAll('[data-tel]').forEach(function (a) { var n = a.getAttribute('data-tel') === '2' ? cfg.phone2Dial : cfg.phoneDial; a.href = isSet(n) ? 'tel:' + n : 'contact.html'; });
   document.querySelectorAll('[data-mail]').forEach(function (a) { a.href = isSet(cfg.email) ? 'mailto:' + cfg.email : 'contact.html'; });
   document.querySelectorAll('[data-cfg]').forEach(function (el) {
     var v = cfg[el.getAttribute('data-cfg')];

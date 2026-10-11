@@ -7,9 +7,12 @@ window.SSS_CONFIG = {
   // Digits only, with country code, no "+" or spaces. Example format: 919876543210
   whatsappNumber: '917350319193',
   // Shown as text, e.g. "+91 98765 43210"
-  phoneDisplay: '+91 63531 81472',
+  phoneDisplay: '+91 73503 19193',
   // Digits with country code for tel: links, e.g. +919876543210
-  phoneDial: '+916353181472',
+  phoneDial: '+917350319193',
+  // Second phone number, shown after the first
+  phone2Display: '+91 63531 81472',
+  phone2Dial: '+916353181472',
   email: '[EMAIL]',
   address: 'APMC Market, Dindori, Nashik, Maharashtra',
   instagram: 'sssimportexport',

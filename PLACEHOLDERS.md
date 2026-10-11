@@ -41,9 +41,9 @@ Then run `python3 tools/build.py`. It fills canonical / Open Graph / schema.org 
 | `[GRANDFATHER'S NAME]` | First generation |
 | `[FATHER'S NAME]` | Second generation |
 
-## 5. Testimonials — `index.html`
+## 5. Testimonials
 
-Four cards are clearly flagged **PLACEHOLDER**. Replace each `[Client testimonial …]`, `[Client name]` and `[Company]` with **real, approved** quotes — or delete the section. Remove the `<span class="quote__flag">Placeholder</span>` badge on each when done.
+Section removed from the home page at the owner's request (2026-10-11).
 
 ## 6. Commercial terms
 

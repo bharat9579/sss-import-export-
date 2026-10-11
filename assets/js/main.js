@@ -244,17 +244,21 @@
   gsap.registerPlugin(ST);
   var EASE = 'power3.out';
 
+  // while the logo intro is on screen, hold the hero animations until it lifts
+  var introAt = Date.now() + (doc.classList.contains('sl-on') ? Math.max(0, 3450 - performance.now()) : 0);
+  var introWait = function () { return Math.max(0, (introAt - Date.now()) / 1000); };
+
   // hero headline: word-by-word rise
   document.querySelectorAll('[data-split]').forEach(function (el) {
     var words = splitWords(el);
-    gsap.from(words, { yPercent: 115, opacity: 0, duration: 1.3, ease: 'power4.out', stagger: 0.06, delay: 0.15 });
+    gsap.from(words, { yPercent: 115, opacity: 0, duration: 1.3, ease: 'power4.out', stagger: 0.06, delay: 0.15 + introWait() });
   });
 
   // reveal on scroll: fade + 24px rise, staggered per batch
   gsap.set(reveals, { opacity: 0, y: 24 });
   ST.batch(reveals, {
     start: 'top 90%',
-    onEnter: function (batch) { gsap.to(batch, { opacity: 1, y: 0, duration: 1.1, ease: EASE, stagger: 0.09, overwrite: true }); }
+    onEnter: function (batch) { gsap.to(batch, { opacity: 1, y: 0, duration: 1.1, ease: EASE, stagger: 0.09, delay: introWait(), overwrite: true }); }
   });
 
   // counters

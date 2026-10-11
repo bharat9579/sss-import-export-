@@ -1074,3 +1074,46 @@ h3 { font-weight: 500; letter-spacing: -.015em; }
   .trust__list li, .trust__list li:first-child, .trust__list li:nth-child(3) { padding: 0 12px; }
   .trust__list li + li { border-left: 0; }
 }
+
+/* =====================================================================
+   Logo intro (home, once per visit): import and export routes rise from
+   the origin, meet at the top to close the diamond, then the SSS seal
+   and the wordmark appear and the screen lifts away.
+   ===================================================================== */
+.sl { display: none; }
+html.sl-on, html.sl-on body { overflow: hidden; }
+html.sl-on .sl { position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 3vh, 30px);
+  background: radial-gradient(ellipse at 50% 42%, #ffffff 0%, var(--ivory) 55%, #f1eee3 100%); transition: clip-path .85s cubic-bezier(.76, 0, .24, 1); clip-path: inset(0 0 0 0); }
+.sl--out { clip-path: inset(0 0 100% 0) !important; }
+.sl__stage { position: relative; width: clamp(230px, 44vmin, 400px); aspect-ratio: 2000 / 1900; transition: transform .85s cubic-bezier(.76, 0, .24, 1), opacity .6s ease; }
+.sl--out .sl__stage { transform: translateY(-6vh) scale(.94); opacity: 0; }
+.sl__svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.sl__route { fill: none; stroke: #024CAE; stroke-width: 38; stroke-linejoin: miter; stroke-linecap: butt; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.sl__origin { fill: var(--butter-deep); transform-box: fill-box; transform-origin: center;  }
+.sl--go .sl__origin { animation: sl-pop .4s cubic-bezier(.34, 1.56, .64, 1) .05s both, sl-fade .4s ease 1.55s forwards; }
+.sl__ship { fill: #fff; stroke: #C9A24A; stroke-width: 12; filter: drop-shadow(0 0 22px rgba(233, 190, 70, 1)); opacity: 0; transition: opacity .15s; }
+.sl__meet { fill: none; stroke: var(--butter-deep); stroke-width: 8; opacity: 0; transform-box: fill-box; transform-origin: center;  }
+.sl--go .sl__meet { animation: sl-ring .9s cubic-bezier(.22, 1, .36, 1) 1.55s forwards; }
+.sl__mono { position: absolute; left: 34.5%; top: 30.9%; width: 30.1%; aspect-ratio: 560 / 518; clip-path: inset(0 100% 0 0); filter: blur(6px); transform: scale(.94);
+   }
+.sl--go .sl__mono { animation: sl-seal .9s cubic-bezier(.22, 1, .36, 1) 1.5s forwards; }
+.sl__mono img { width: 100%; height: 100%; display: block; filter: saturate(1.25) contrast(1.12) brightness(.92) drop-shadow(0 2px 3px rgba(120, 90, 30, .18)); }
+.sl__mono::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, rgba(255, 252, 235, .95) 50%, transparent 65%) no-repeat;
+  background-size: 250% 100%; background-position: 130% 0; -webkit-mask: url(../img/loader/sss-monogram.png) center / contain no-repeat; mask: url(../img/loader/sss-monogram.png) center / contain no-repeat;
+   }
+.sl--go .sl__mono::after { animation: sl-shine 1s ease-in-out 2.15s forwards; }
+.sl__word { position: absolute; left: 25.6%; top: 90.8%; width: 46.9%; height: auto; clip-path: inset(0 50% 0 50%); opacity: 0;  }
+.sl--go .sl__word { animation: sl-word .8s cubic-bezier(.22, 1, .36, 1) 2s forwards; }
+.sl__tag { margin: 0; padding-top: clamp(14px, 3vh, 26px); font-size: .7rem; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: var(--oxford-mid); opacity: 0; transform: translateY(8px);
+   }
+.sl--go .sl__tag { animation: sl-tag .7s ease 2.35s forwards; }
+.sl--out .sl__tag { opacity: 0 !important; transition: opacity .3s; }
+@keyframes sl-draw { to { stroke-dashoffset: 0; } }
+@keyframes sl-pop { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes sl-fade { to { opacity: 0; } }
+@keyframes sl-ship { 0% { opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sl-ring { 0% { opacity: 1; transform: scale(.4); } 100% { opacity: 0; transform: scale(5); } }
+@keyframes sl-seal { to { clip-path: inset(0 0 0 0); filter: blur(0); transform: scale(1); } }
+@keyframes sl-shine { to { background-position: -130% 0; } }
+@keyframes sl-word { to { clip-path: inset(0 0 0 0); opacity: 1; } }
+@keyframes sl-tag { to { opacity: 1; transform: none; } }

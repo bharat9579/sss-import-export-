@@ -70,6 +70,7 @@ Home hero onion photos from [Wikimedia Commons](https://commons.wikimedia.org):
 - `hero/onion-pile`, "Onions on a trolley in India", Ravi Dwivedi, CC BY-SA 4.0
 - `hero/onion-field`, "Onion farming", Gajanan Jagannath Jagdale, CC0
 - `hero/onion-gulabi`, "Lasalgaon Manganga Gulabi Onions freshly plucked from a field", Bapu Shinde, CC0
-- Legacy section `origin-onion`, "Onion grading and cleaning", Nishaexport, CC BY-SA 3.0
 
 Replace these with the company's own Nashik onion photos when available.
+
+Legacy section satellite flyover: EOxCloudless 2016 (https://cloudless.eox.at) by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2016, CC BY 4.0 (credited in the map caption). Regenerate the map overlay with `python3 tools/onion_map.py`.

@@ -29,6 +29,49 @@
   });
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
+  /* ------------------------------------------------ onion-belt satellite flyover: load near view, play, loop */
+  document.querySelectorAll('[data-onion-map]').forEach(function (map) {
+    var pins = map.querySelectorAll('.om-pin');
+    var sat = map.querySelector('.om-sat');
+    var nameEl = map.querySelector('[data-om-name]');
+    var coordEl = map.querySelector('[data-om-coord]');
+    var timers = [];
+    function show(i) {
+      pins.forEach(function (p, k) { p.classList.toggle('is-spot', k === i); });
+      if (nameEl) nameEl.textContent = pins[i].querySelector('text').textContent;
+      if (coordEl) coordEl.textContent = pins[i].getAttribute('data-coord');
+    }
+    function play() {
+      timers.forEach(clearTimeout); timers = [];
+      pins.forEach(function (p) { p.classList.remove('is-spot'); });
+      map.classList.remove('is-live');
+      void map.getBoundingClientRect();     // restart CSS animations
+      map.classList.add('is-live');
+      if (reduceMotion || !pins.length) return;
+      // after the camera lands, spotlight each town, then fly in again
+      for (var i = 0; i < pins.length; i++) {
+        timers.push(setTimeout(show.bind(null, i), 6800 + i * 2600));
+      }
+      timers.push(setTimeout(function () { if (document.hidden) { timers.push(setTimeout(play, 4000)); } else { play(); } },
+        6800 + pins.length * 2600 + 1800));
+    }
+    function load(cb) {
+      if (!sat || sat.getAttribute('href')) { cb(); return; }
+      var img = new Image();
+      img.onload = img.onerror = function () { sat.setAttribute('href', img.src); sat.classList.add('is-loaded'); cb(); };
+      img.src = sat.getAttribute('data-href');
+    }
+    if (!('IntersectionObserver' in window)) { load(play); return; }
+    var started = false;
+    new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        if (e.intersectionRatio < 0.35) { load(function () {}); return; }
+        if (!started) { started = true; load(play); obs.disconnect(); }
+      });
+    }, { threshold: [0, 0.35], rootMargin: '400px 0px 0px 0px' }).observe(map);
+  });
+
   /* ------------------------------------------------ hero product mosaic: tiles cross-fade one at a time */
   document.querySelectorAll('[data-mosaic]').forEach(function (mosaic) {
     var tiles = Array.prototype.filter.call(mosaic.querySelectorAll('[data-tile]'), function (t) {

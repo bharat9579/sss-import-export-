@@ -10,9 +10,6 @@ window.SSS_CONFIG = {
   phoneDisplay: '+91 73503 19193',
   // Digits with country code for tel: links, e.g. +919876543210
   phoneDial: '+917350319193',
-  // Second phone number, shown after the first
-  phone2Display: '+91 63531 81472',
-  phone2Dial: '+916353181472',
   email: 'connect@sssimportexport.com',
   address: 'APMC Market, Dindori, Nashik, Maharashtra',
   instagram: 'sssimportexport',
